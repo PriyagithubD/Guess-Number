@@ -1,29 +1,26 @@
-import random
+import javax.swing.JFrame;
 
-guesses_made = 0
+2. 
 
-name = raw_input('Hello! What is your name?\n')
+3.public class Main {
 
-number = random.randint(1, 20)
-print 'Well, {0}, I am thinking of a number between 1 and 20.'.format(name)
+4.	public static void main(String args[]){
 
-while guesses_made < 6:
+5.		JFrame frame = new Grid();
 
-    guess = int(raw_input('Take a guess: '))
+6.		frame.setTitle("Notepad");
 
-    guesses_made += 1
+7.		frame.setVisible(true);
 
-    if guess < number:
-        print 'Your guess is too low.'
+8.		frame.setSize(1280, 720);
 
-    if guess > number:
-        print 'Your guess is too high.'
+9.		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    if guess == number:
-        break
+10.		frame.setResizable(true);
 
-if guess == number:
-    print 'Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made)
-else:
-    print 'Nope. The number I was thinking of was {0}'.format(number)
+11.		frame.setLocationRelativeTo(null);
+
+12.	}
+
+13.}
 
